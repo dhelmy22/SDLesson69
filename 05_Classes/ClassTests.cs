@@ -39,6 +39,17 @@ namespace _05_Classes
             Console.WriteLine(vehicle.Make);
             Console.WriteLine(vehicle.GetModel());
         }
+        [TestMethod]
+        public void PersonTest()
+        {
+            Person andrew = new Person("Andrew", "Torr", new DateTime(1985, 9, 22));
+            Vehicle car = new Vehicle(VehicleType.Car, "Journey");
+            andrew.Transport = car;
+
+            Console.WriteLine(andrew.FullName);
+            Console.WriteLine(andrew.Age);
+            Console.WriteLine(andrew.Transport.TypeOfVehicle);
+        }
 
     }
 }
